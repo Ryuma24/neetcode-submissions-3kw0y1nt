@@ -10,7 +10,7 @@ class Solution {
 
             StringBuilder key = new StringBuilder();
             for(int c: cnt){
-                key.append('#').append(c);
+                key.append('#').append(c);//avoid key based collisions
             }
             String k = key.toString();
             mp.computeIfAbsent(k , x-> new ArrayList<>()).add(s);
